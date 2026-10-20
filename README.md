@@ -2,7 +2,7 @@
 
 Website for **LAMFAM Charity**, a youth-led charity in The Gambia. *Be someone's reason to smile.*
 
-A static one-page site (HTML, CSS, vanilla JS) with a black-and-white design, light and dark mode, and full-colour photography from our work: Ramadan food packages, water points and boreholes, Quran distribution and hospital visits.
+A static one-page site (HTML, CSS, vanilla JS) with a black-and-white design, light and dark mode, and full-colour photography from our work: Ramadan food packages, water points and boreholes, Qurans and essentials for students, and hospital visits.
 
 ## Run locally
 
