@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LAMFAM Charity — Be someone's reason to smile</title>
+  <meta name="description" content="LAMFAM Charity is a youth-led charity in The Gambia feeding families during Ramadan, building water points, visiting the sick and providing Qurans and equipment to communities in need." />
+  <meta property="og:title" content="LAMFAM Charity" />
+  <meta property="og:description" content="Youth-led charity in The Gambia. Be someone's reason to smile." />
+  <meta property="og:image" content="assets/photos/volunteers-group.jpg" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>
+    try { const t = localStorage.getItem('lamfam-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav" id="nav">
+    <div class="announce">
+      <div class="container announce__inner">
+        <span class="announce__tag">Live appeal</span>
+        <span class="announce__text">Help us bring clean water to another community.</span>
+        <a href="https://gofund.me/fff518db1" target="_blank" rel="noopener" class="announce__link">Donate now <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="LAMFAM Charity home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__word">LAMFAM<small>Charity</small></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#work">Our Work</a>
+        <a href="#appeal">Appeal</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="i-moon"></i>
+          <i data-lucide="sun" class="i-sun"></i>
+        </button>
+        <a href="#donate-options" class="btn btn--solid btn--sm"><i data-lucide="heart"></i> Donate</a>
+        <button class="icon-btn nav__burger" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#about">About</a>
+      <a href="#work">Our Work</a>
+      <a href="#appeal">Appeal</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+      <a href="#donate-options" class="btn btn--solid">Donate now</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <span class="orb orb--1" aria-hidden="true"></span>
+      <span class="orb orb--2" aria-hidden="true"></span>
+      <span class="orb orb--3" aria-hidden="true"></span>
+
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow reveal"><span class="dot"></span> Youth-led charity · The Gambia</p>
+          <h1 class="display reveal">
+            Be someone's<br />
+            <em>reason</em> to smile.
+          </h1>
+          <p class="lead reveal">
+            We are young Gambians working to make living conditions better for the less privileged —
+            feeding families through Ramadan, bringing clean water to communities, visiting the sick and
+            putting the Quran into the hands of those who seek it.
+          </p>
+          <div class="hero__ctas reveal">
+            <a href="#donate-options" class="btn btn--solid">Give today <i data-lucide="arrow-up-right"></i></a>
+            <a href="#work" class="btn btn--ghost"><i data-lucide="play"></i> See our work</a>
+          </div>
+
+          <div class="supporters reveal">
+            <div class="avatars" aria-hidden="true">
+              <img src="assets/photos/water-kids.jpg" alt="" />
+              <img src="assets/photos/kids-class.jpg" alt="" />
+              <img src="assets/photos/volunteers-doorstep.jpg" alt="" />
+              <span><i data-lucide="plus"></i></span>
+            </div>
+            <div>
+              <strong>6.2K+ supporters</strong>
+              <span>following our journey on Instagram</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pills reveal" aria-label="Photos of LAMFAM volunteers and the communities we serve">
+          <div class="pills__col">
+            <figure class="pill pill--l"><img src="assets/photos/mosque-volunteers.jpg" alt="Two LAMFAM volunteers in branded vests sitting in a mosque" style="object-position: 60% center" /></figure>
+            <figure class="pill pill--s"><img src="assets/photos/kids-class.jpg" alt="A LAMFAM volunteer sitting with children in a classroom" style="object-position: 40% 70%" /></figure>
+          </div>
+          <div class="pills__col">
+            <figure class="pill pill--s"><img src="assets/photos/volunteers-group.jpg" alt="A large group of LAMFAM volunteers with food packages" /></figure>
+            <figure class="pill pill--l"><img src="assets/photos/water-kids.jpg" alt="Children drinking from a new LAMFAM water point" style="object-position: 45% center" /></figure>
+          </div>
+          <div class="pills__col">
+            <figure class="pill pill--m"><img src="assets/photos/borehole-tower.jpg" alt="A LAMFAM volunteer looking up at a new borehole water tower" style="object-position: 55% center" /></figure>
+            <figure class="pill pill--m"><img src="assets/photos/rice-loading.jpg" alt="Volunteers loading sacks of rice into a car" style="object-position: 62% center" /></figure>
+          </div>
+
+          <div class="pills__badge">
+            <span class="chip-mark" aria-hidden="true"></span>
+            <div><strong>Clean water</strong><span>Water points built &amp; dedicated</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Ramadan Food Packages</span><span>✦</span>
+          <span>Clean Water</span><span>✦</span>
+          <span>Quran Distribution</span><span>✦</span>
+          <span>Hospital Visits</span><span>✦</span>
+          <span>Feeding Thousands</span><span>✦</span>
+          <span>Ramadan Food Packages</span><span>✦</span>
+          <span>Clean Water</span><span>✦</span>
+          <span>Quran Distribution</span><span>✦</span>
+          <span>Hospital Visits</span><span>✦</span>
+          <span>Feeding Thousands</span><span>✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="collage reveal">
+          <figure class="collage__main frame"><img id="aboutMain" src="assets/photos/packing.jpg" alt="LAMFAM volunteers packing supplies together" loading="lazy" /></figure>
+          <figure class="collage__circle"><img id="aboutCircle" src="assets/photos/sisters-packages.jpg" alt="Sisters from the LAMFAM team with food packages" loading="lazy" /></figure>
+          <div class="collage__badge">
+            <strong>1000s</strong>
+            <span>people fed<br />during Ramadan</span>
+          </div>
+          <div class="collage__chip">
+            <span class="chip-mark" aria-hidden="true"></span>
+            <span>Run by young volunteers</span>
+          </div>
+          <span class="collage__dots" aria-hidden="true"></span>
+        </div>
+
+        <div class="about__body">
+          <span class="eyebrow reveal"><img src="assets/logo-mark-white.png" alt="" class="eyebrow__mark" /> About LAMFAM</span>
+          <h2 class="h2 reveal">Young hands.<br /><em>Lasting</em> change.</h2>
+
+          <div class="tabs reveal" role="tablist" aria-label="About LAMFAM">
+            <button role="tab" aria-selected="true" aria-controls="tab-story" id="t-story"
+              data-main="assets/photos/packing.jpg" data-main-alt="LAMFAM volunteers packing supplies together"
+              data-circle="assets/photos/sisters-packages.jpg" data-circle-alt="Sisters from the LAMFAM team with food packages">Our Story</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-mission" id="t-mission" tabindex="-1"
+              data-main="assets/photos/plaque-install.jpg" data-main-alt="Volunteers fixing a dedication plaque to a new water point"
+              data-circle="assets/photos/rice-loading.jpg" data-circle-alt="Volunteers loading sacks of rice for families">Our Mission</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-vision" id="t-vision" tabindex="-1"
+              data-main="assets/photos/water-kids.jpg" data-main-alt="Children drinking from a new LAMFAM water point"
+              data-circle="assets/photos/kids-school.jpg" data-circle-alt="Schoolchildren in blue uniforms standing together">Our Vision</button>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="tab-story" aria-labelledby="t-story">
+            <p>LAMFAM Charity is led by young people in The Gambia who believe you don't need to wait to make a difference. Today we are a community of thousands who give, volunteer and show up for families in need.</p>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="tab-mission" aria-labelledby="t-mission" hidden>
+            <p>To contribute towards making living conditions better for the less privileged — through food, clean water, care for the sick and access to the Quran.</p>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="tab-vision" aria-labelledby="t-vision" hidden>
+            <p>A Gambia where no family goes hungry in Ramadan, every community has clean water, and young people lead the way in caring for one another.</p>
+          </div>
+
+          <ul class="checklist reveal">
+            <li><i data-lucide="check"></i> Rooted in the Islamic tradition of sadaqah</li>
+            <li><i data-lucide="check"></i> Every delivery done by hand, by our volunteers</li>
+            <li><i data-lucide="check"></i> Progress shared openly with our community</li>
+          </ul>
+
+          <div class="hero__ctas reveal">
+            <a href="#work" class="btn btn--solid">Explore our work <i data-lucide="arrow-right"></i></a>
+            <span class="hashtag">#BeSomeonesReasonToSmile</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="stats">
+          <div class="stat reveal">
+            <span class="stat__icon"><i data-lucide="utensils"></i></span>
+            <span class="stat__value"><span data-count="1000">0</span>s</span>
+            <span class="stat__label">People fed during Ramadan</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__icon"><i data-lucide="users"></i></span>
+            <span class="stat__value"><span data-count="6200">0</span>+</span>
+            <span class="stat__label">Supporters in our community</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__icon"><i data-lucide="layers"></i></span>
+            <span class="stat__value"><span data-count="6">0</span></span>
+            <span class="stat__label">Programmes running</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__icon"><i data-lucide="sparkles"></i></span>
+            <span class="stat__value">100%</span>
+            <span class="stat__label">Youth-led &amp; volunteer-run</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section section--inverse" id="work">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">What we do</span>
+            <h2 class="h2 reveal">Six ways we bring <em>smiles</em> home</h2>
+          </div>
+          <p class="section-head__aside reveal">Food, water, faith and care — delivered by young volunteers, hand to hand.</p>
+        </div>
+
+        <!-- Cards without a photo show an icon tile; add <img> inside .work-card__media when photos arrive -->
+        <div class="work-grid">
+          <article class="work-card reveal">
+            <div class="work-card__media work-card__media--empty"><i data-lucide="soup"></i></div>
+            <span class="work-card__num">No — 01</span>
+            <div class="work-card__body">
+              <h3>Iftar for the fasting</h3>
+              <p>During Ramadan we serve meals to those who are fasting and in need. Together, we have fed thousands.</p>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-card__media"><img src="assets/photos/packages-group.jpg" alt="Volunteers behind rows of Ramadan food packages" loading="lazy" /></div>
+            <span class="work-card__num">No — 02</span>
+            <div class="work-card__body">
+              <h3>Ramadan food packages</h3>
+              <p>Rice, onions, oil and essentials delivered straight to family doors, so households can focus on worship, not worry.</p>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-card__media"><img src="assets/photos/plaque-install.jpg" alt="Volunteers fixing a dedication plaque to a new water point" loading="lazy" /></div>
+            <span class="work-card__num">No — 03</span>
+            <div class="work-card__body">
+              <h3>Boreholes &amp; water points</h3>
+              <p>Clean, reliable water for whole communities — <em>sadaqah jariyah</em> that keeps flowing for years.</p>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-card__media"><img src="assets/photos/quran-students.jpg" alt="Quranic students in a daara" loading="lazy" /></div>
+            <span class="work-card__num">No — 04</span>
+            <div class="work-card__body">
+              <h3>Qurans for students</h3>
+              <p>We provide Qurans to students and daaras, supporting the next generation of Islamic learning.</p>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-card__media work-card__media--empty"><i data-lucide="hospital"></i></div>
+            <span class="work-card__num">No — 05</span>
+            <div class="work-card__body">
+              <h3>Hospital visits</h3>
+              <p>We visit patients, bring comfort and support, and remind them they are not forgotten.</p>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-card__media work-card__media--empty"><i data-lucide="wrench"></i></div>
+            <span class="work-card__num">No — 06</span>
+            <div class="work-card__body">
+              <h3>Equipment for communities</h3>
+              <p>Practical equipment that helps communities learn, work and thrive long after we leave.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APPEAL ============ -->
+    <section class="section" id="appeal">
+      <div class="container appeal">
+        <div class="bubbles reveal">
+          <span class="bubbles__dots" aria-hidden="true"></span>
+          <figure class="bubble bubble--xl"><img src="assets/photos/water-point.jpg" alt="Clean water flowing from a LAMFAM water point" loading="lazy" /></figure>
+          <figure class="bubble bubble--md"><img src="assets/photos/borehole-tower.jpg" alt="A volunteer at a new borehole water tower" loading="lazy" /></figure>
+          <figure class="bubble bubble--sm"><img src="assets/photos/water-kids.jpg" alt="Children drinking from a LAMFAM water point" loading="lazy" /></figure>
+          <span class="orb orb--a" aria-hidden="true"></span>
+          <span class="orb orb--b" aria-hidden="true"></span>
+        </div>
+
+        <div class="appeal__copy">
+          <span class="eyebrow reveal">Current appeal</span>
+          <h2 class="h2 reveal">Water is <em>life.</em> Help us build the next borehole.</h2>
+          <p class="reveal">
+            Many communities still walk long distances for water that isn't safe to drink. A single borehole changes that for
+            an entire village — for children, for mothers, for students in the daara. It is charity that continues, insha'Allah,
+            for generations.
+          </p>
+          <div class="memorial reveal">
+            <i data-lucide="flower-2"></i>
+            <p><strong>Give in memory of a loved one.</strong> Water points can carry a dedication plaque, so their reward continues with every drop.</p>
+          </div>
+          <div class="hero__ctas reveal">
+            <a href="https://gofund.me/fff518db1" target="_blank" rel="noopener" class="btn btn--solid">Donate on GoFundMe <i data-lucide="arrow-up-right"></i></a>
+            <a href="#contact" class="btn btn--ghost" data-subject="Donate">Dedicate a water point</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <blockquote class="quote reveal">
+          <p>“The believer's shade on the Day of Resurrection will be their charity.”</p>
+          <cite>— Prophet Muhammad ﷺ (Musnad Ahmad)</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section section--alt" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">From the field</span>
+            <h2 class="h2 reveal">Moments that <em>matter</em></h2>
+          </div>
+          <a href="https://www.instagram.com/lamfam_charity/" target="_blank" rel="noopener" class="btn btn--ghost reveal"><i data-lucide="instagram"></i> More on Instagram</a>
+        </div>
+
+        <div class="gallery">
+          <figure class="g g--wide reveal"><img src="assets/photos/packages-volunteers.jpg" alt="Volunteers standing among food packages laid out for families" loading="lazy" /><figcaption>Ready for distribution</figcaption></figure>
+          <figure class="g g--tall reveal"><img src="assets/photos/vest-logo.jpg" alt="Back of a LAMFAM Charity volunteer vest with the hand logo" loading="lazy" /><figcaption>Be someone's reason to smile</figcaption></figure>
+          <figure class="g reveal"><img src="assets/photos/truck-onions.jpg" alt="Volunteers unloading sacks of onions from a pickup truck" loading="lazy" /><figcaption>Unloading the truck</figcaption></figure>
+          <figure class="g reveal"><img src="assets/photos/kids-school.jpg" alt="A group of schoolchildren in blue uniforms" loading="lazy" /><figcaption>Students we support</figcaption></figure>
+          <figure class="g reveal"><img src="assets/photos/kids-home.jpg" alt="Children sitting together inside a family home" loading="lazy" style="object-position: center 70%" /><figcaption>Visiting families</figcaption></figure>
+          <figure class="g reveal"><img src="assets/photos/volunteers-doorstep.jpg" alt="Volunteers smiling as they deliver a package" loading="lazy" /><figcaption>Doorstep deliveries</figcaption></figure>
+          <figure class="g g--tall reveal"><img src="assets/photos/borehole-build.jpg" alt="A volunteer climbing a new borehole water tower" loading="lazy" /><figcaption>Raising the water tower</figcaption></figure>
+          <figure class="g g--wide reveal"><img src="assets/photos/event-team.jpg" alt="Brothers and sisters of the LAMFAM team at an event" loading="lazy" /><figcaption>The LAMFAM family</figcaption></figure>
+          <figure class="g reveal"><img src="assets/photos/packing.jpg" alt="Volunteers packing supplies into boxes" loading="lazy" /><figcaption>Packing day</figcaption></figure>
+          <figure class="g reveal"><img src="assets/photos/sisters-packages.jpg" alt="Sisters from the LAMFAM team with packages" loading="lazy" /><figcaption>Our sisters on the ground</figcaption></figure>
+          <figure class="g g--wide reveal"><img src="assets/photos/community-group.jpg" alt="A large group of volunteers and community members together" loading="lazy" /><figcaption>#TogetherWeCanMakeADifference</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEAM ============ -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">The people behind it</span>
+            <h2 class="h2 reveal">Meet the <em>LAMFAM</em> family</h2>
+          </div>
+          <p class="section-head__aside reveal">Students, graduates and young professionals giving their time for the community.</p>
+        </div>
+
+        <figure class="team-hero reveal">
+          <img src="assets/photos/team.jpg" alt="LAMFAM brother volunteers standing with members of the team in matching vests" loading="lazy" />
+          <figcaption>
+            <span class="eyebrow">#TogetherWeCanMakeADifference</span>
+            <strong>Our brother volunteers, with members of the team</strong>
+          </figcaption>
+        </figure>
+
+        <!-- Team cards are rendered from the TEAM list in script.js -->
+        <div class="team-grid" id="teamGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ PARTNERS ============ -->
+    <section class="partners">
+      <div class="container partners__inner">
+        <span class="eyebrow">In partnership with</span>
+        <div class="partners__list">
+          <span class="partner">Amana Foundation</span>
+          <span class="partner partner--boxed">Future Economists</span>
+          <span class="partner">Forward For You</span>
+          <span class="partner">Tawakul Outreach Org</span>
+          <a href="#contact" class="partner partner--cta" data-subject="Partnership">Your organisation? <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GET INVOLVED ============ -->
+    <section class="section" id="donate-options">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Get involved</span>
+            <h2 class="h2 reveal">There's a place for <em>you</em> here</h2>
+          </div>
+          <p class="section-head__aside reveal">Give, volunteer, partner or simply share — every bit of it feeds a family.</p>
+        </div>
+
+        <div class="involve-grid">
+          <a class="involve involve--dark reveal" href="https://gofund.me/fff518db1" target="_blank" rel="noopener">
+            <i data-lucide="heart-handshake"></i>
+            <h3>Donate</h3>
+            <p>Fund food packages, water points and Qurans. Every dalasi counts.</p>
+            <span class="involve__link">Give now <i data-lucide="arrow-right"></i></span>
+          </a>
+          <a class="involve reveal" href="#contact" data-subject="Volunteering">
+            <i data-lucide="users"></i>
+            <h3>Volunteer</h3>
+            <p>Pack, deliver, serve iftar or visit patients alongside our team.</p>
+            <span class="involve__link">Join us <i data-lucide="arrow-right"></i></span>
+          </a>
+          <a class="involve reveal" href="#contact" data-subject="Partnership">
+            <i data-lucide="building-2"></i>
+            <h3>Partner</h3>
+            <p>Businesses, mosques and schools — let's build something lasting together.</p>
+            <span class="involve__link">Partner with us <i data-lucide="arrow-right"></i></span>
+          </a>
+          <a class="involve reveal" href="https://www.instagram.com/lamfam_charity/" target="_blank" rel="noopener">
+            <i data-lucide="share-2"></i>
+            <h3>Spread the word</h3>
+            <p>Follow, share and tell a friend. Awareness feeds families too.</p>
+            <span class="involve__link">Follow us <i data-lucide="arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HASHTAG BAND ============ -->
+    <section class="band" aria-label="Our hashtags">
+      <div class="band__track">
+        <span>#BeSomeonesReasonToSmile</span><span class="band__mark" aria-hidden="true"></span>
+        <span><em>#TogetherWeCanMakeADifference</em></span><span class="band__mark" aria-hidden="true"></span>
+        <span>#LamfamCharity</span><span class="band__mark" aria-hidden="true"></span>
+        <span>#BeSomeonesReasonToSmile</span><span class="band__mark" aria-hidden="true"></span>
+        <span><em>#TogetherWeCanMakeADifference</em></span><span class="band__mark" aria-hidden="true"></span>
+        <span>#LamfamCharity</span><span class="band__mark" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--inverse" id="contact">
+      <div class="container contact">
+        <div class="contact__copy">
+          <span class="eyebrow reveal">Contact</span>
+          <h2 class="h2 reveal">Let's make someone <em>smile</em> together.</h2>
+          <p class="reveal">Questions, partnerships, volunteering or donations in kind — send us a message and the team will get back to you.</p>
+          <div class="socials reveal">
+            <a href="https://www.instagram.com/lamfam_charity/" target="_blank" rel="noopener" aria-label="Instagram">
+              <i data-lucide="instagram"></i> @lamfam_charity
+            </a>
+            <a href="https://www.tiktok.com/@lamfam_charity" target="_blank" rel="noopener" aria-label="TikTok">
+              <i data-lucide="music-2"></i> TikTok
+            </a>
+          </div>
+        </div>
+
+        <form class="form reveal" id="contactForm">
+          <div class="form__row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="subject">I'd like to</label>
+            <select id="subject" name="subject">
+              <option>Donate</option>
+              <option>Volunteering</option>
+              <option>Partnership</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button class="btn btn--solid btn--block" type="submit">Send message <i data-lucide="send"></i></button>
+          <p class="form__note" id="formNote" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo-full-white.png" alt="LAMFAM Charity — Be someone's reason to smile" class="footer__logo" />
+        <p>A youth-led charity making living conditions better for the less privileged in The Gambia.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#about">About</a>
+        <a href="#work">Our Work</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#team">Team</a>
+      </div>
+      <div>
+        <h4>Give</h4>
+        <a href="https://gofund.me/fff518db1" target="_blank" rel="noopener">Borehole appeal</a>
+        <a href="#donate-options">Volunteer</a>
+        <a href="#donate-options">Partner</a>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <a href="https://www.instagram.com/lamfam_charity/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@lamfam_charity" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> LAMFAM Charity · The Gambia</span>
+      <span>#BeSomeonesReasonToSmile 🤍</span>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
