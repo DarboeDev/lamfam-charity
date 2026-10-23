@@ -2,23 +2,43 @@
    LAMFAM Charity — site behaviour
    ========================================================== */
 
-// ---- Edit the team here. Add `photo: "assets/team/name.jpg"` once you have headshots.
+// ---- Edit the team here. Add `photo: "assets/team/name.jpg"` once you have headshots,
+// and `phone: "+220 …"` to list someone under Contact with Call / WhatsApp buttons.
 const TEAM = [
-  { name: "Team member", role: "Founder" },
-  { name: "Team member", role: "Event Coordinator" },
-  { name: "Team member", role: "Finance & Donations" },
-  { name: "Team member", role: "Projects & Logistics" },
-  { name: "Team member", role: "Media & Communications" },
-  { name: "Team member", role: "Volunteer Lead" },
+  { name: "Ya Fatou", role: "Founder" },
+  { name: "Muhammed Darboe", role: "Event Coordinator", phone: "+220 877595999" },
+  { name: "Pa Sulley", role: "Team member" },
+  { name: "Fatoumatta", role: "Team member" },
 ];
 
-// ---- Messages from the contact form are sent here (opens the visitor's email app).
+// ---- Donation details shown in the Donate section. Empty values show "Coming soon".
+const DONATE = {
+  wave: { number: "+220 833922803", name: "Ya Fatou Jobe" },
+  bank: { bank: "GT Bank", accountName: "Lamfam Charity", accountNumber: "2011398391590" },
+  whatsapp: "", // donation confirmations; falls back to FLOATING_WHATSAPP when empty
+  // Donors send their receipt (or any follow-up) to either of these on WhatsApp.
+  receipts: ["+220 833922803", "+220 877595999"],
+};
+
+// ---- General phone numbers shown under Contact and in the footer, with Call and WhatsApp buttons.
+// Team members with a `phone` are listed there too, under their name.
+const CONTACT_NUMBERS = ["+220 833922803"];
+
+// ---- The floating WhatsApp button opens a chat with this number (Muhammed Darboe).
+const FLOATING_WHATSAPP = "+220 877595999";
+
+// ---- Contact form. Paste your free Web3Forms access key here (get one at https://web3forms.com
+// using the inbox that should receive messages). Until it is set, the form opens the visitor's
+// email app addressed to CONTACT_EMAIL instead.
+const FORM_ACCESS_KEY = "";
 const CONTACT_EMAIL = "hello@lamfamcharity.org";
 
 const root = document.documentElement;
 
-// Icons
-if (window.lucide) lucide.createIcons();
+// Escape text before inserting it as HTML
+const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) =>
+  ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+const digits = (v) => String(v || "").replace(/\D/g, "");
 
 // Year
 document.getElementById("year").textContent = new Date().getFullYear();
@@ -29,14 +49,111 @@ document.getElementById("teamGrid").innerHTML = TEAM.map((m) => `
   <article class="member reveal">
     <div class="member__photo">
       ${m.photo
-        ? `<img class="photo" src="${m.photo}" alt="${m.name}, ${m.role}" loading="lazy" />`
-        : `<span class="member__initials">${initials(m.name)}</span><span class="watermark" aria-hidden="true"></span>`}
+        ? `<img class="photo" src="${esc(m.photo)}" alt="${esc(m.name)}, ${esc(m.role)}" loading="lazy" />`
+        : `<span class="member__initials">${esc(initials(m.name))}</span><span class="watermark" aria-hidden="true"></span>`}
     </div>
     <div>
-      <h3>${m.name}</h3>
-      <p>${m.role}</p>
+      <h3>${esc(m.name)}</h3>
+      <p>${esc(m.role)}</p>
     </div>
   </article>`).join("");
+
+// Team contacts (members with a phone number)
+const reachable = TEAM.filter((m) => m.phone);
+const contactList = document.getElementById("teamContacts");
+if (reachable.length) {
+  contactList.innerHTML = reachable.map((m) => `
+    <li>
+      <div><strong>${esc(m.name)}</strong><span>${esc(m.role)}</span></div>
+      <div class="team-contacts__actions">
+        <a href="tel:+${digits(m.phone)}" aria-label="Call ${esc(m.name)}"><i data-lucide="phone"></i> Call</a>
+        <a href="https://wa.me/${digits(m.phone)}" target="_blank" rel="noopener" aria-label="WhatsApp ${esc(m.name)}"><i data-lucide="message-circle"></i> WhatsApp</a>
+      </div>
+    </li>`).join("");
+  contactList.hidden = false;
+}
+
+// Contact numbers
+const numbersList = document.getElementById("contactNumbers");
+if (CONTACT_NUMBERS.length) {
+  numbersList.innerHTML = CONTACT_NUMBERS.map((n) => `
+    <li>
+      <div><strong>${esc(n)}</strong><span>Call or WhatsApp us</span></div>
+      <div class="team-contacts__actions">
+        <a href="tel:+${digits(n)}" aria-label="Call ${esc(n)}"><i data-lucide="phone"></i> Call</a>
+        <a href="https://wa.me/${digits(n)}" target="_blank" rel="noopener" aria-label="WhatsApp ${esc(n)}"><i data-lucide="message-circle"></i> WhatsApp</a>
+      </div>
+    </li>`).join("");
+  numbersList.hidden = false;
+}
+document.getElementById("footerNumbers").innerHTML = [...CONTACT_NUMBERS, ...TEAM.filter((m) => m.phone).map((m) => m.phone)]
+  .map((n) => `<a href="tel:+${digits(n)}">${esc(n)}</a>`).join("");
+const WHATSAPP = digits(DONATE.whatsapp) || digits(FLOATING_WHATSAPP);
+
+// Donation details
+const donateValue = (path) => path.split(".").reduce((o, k) => (o ? o[k] : ""), DONATE);
+document.querySelectorAll("[data-donate]").forEach((el) => {
+  const v = donateValue(el.dataset.donate);
+  el.textContent = v || "Coming soon";
+  el.classList.toggle("is-empty", !v);
+});
+document.querySelectorAll("[data-copy]").forEach((btn) => {
+  const v = donateValue(btn.dataset.copy);
+  if (!v) { btn.hidden = true; return; }
+  btn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(v);
+      btn.classList.add("is-copied");
+      btn.setAttribute("aria-label", "Copied");
+      setTimeout(() => btn.classList.remove("is-copied"), 1600);
+    } catch (e) {}
+  });
+});
+// "Send your receipt" WhatsApp buttons (Donate section and floating panel)
+const receiptText = encodeURIComponent("Assalamu alaikum, I have just sent a donation to LAMFAM Charity. Here is my receipt. It is for: ");
+const receiptNumbers = (DONATE.receipts || []).filter((n) => digits(n));
+if (!receiptNumbers.length && WHATSAPP) receiptNumbers.push(WHATSAPP);
+const receiptLink = (n) =>
+  `<a href="https://wa.me/${digits(n)}?text=${receiptText}" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> ${esc(n)}</a>`;
+if (receiptNumbers.length) {
+  document.getElementById("receiptLinks").innerHTML = receiptNumbers.map(receiptLink).join("");
+  document.getElementById("receiptBox").hidden = false;
+  document.getElementById("fabReceipts").innerHTML = receiptNumbers.map(receiptLink).join("");
+  document.getElementById("fabReceiptBox").hidden = false;
+}
+
+// Floating Donate panel and WhatsApp button
+const fabBtn = document.getElementById("fabBtn");
+const fabPanel = document.getElementById("fabPanel");
+const setFab = (open) => {
+  fabPanel.hidden = !open;
+  fabBtn.setAttribute("aria-expanded", String(open));
+  document.getElementById("fab").classList.toggle("is-open", open);
+};
+fabBtn.addEventListener("click", () => setFab(fabPanel.hidden));
+document.getElementById("fabClose").addEventListener("click", () => setFab(false));
+document.getElementById("fabMore").addEventListener("click", () => setFab(false));
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") setFab(false); });
+document.addEventListener("click", (e) => { if (!document.getElementById("fab").contains(e.target)) setFab(false); });
+
+const fabWa = document.getElementById("fabWa");
+if (digits(FLOATING_WHATSAPP)) {
+  fabWa.href = `https://wa.me/${digits(FLOATING_WHATSAPP)}?text=${encodeURIComponent("Assalamu alaikum LAMFAM Charity, ")}`;
+  fabWa.hidden = false;
+}
+
+// Partners slider: append a hidden copy of the logos so the loop is seamless
+const partnersTrack = document.getElementById("partnersTrack");
+if (partnersTrack && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  [...partnersTrack.children].forEach((tile) => {
+    const copy = tile.cloneNode(true);
+    copy.setAttribute("aria-hidden", "true");
+    partnersTrack.appendChild(copy);
+  });
+}
+
+// Icons (after all dynamic content is on the page)
+if (window.lucide) lucide.createIcons();
 
 // About tabs (arrow keys move between tabs)
 const tabs = [...document.querySelectorAll('[role="tab"]')];
@@ -145,12 +262,46 @@ document.querySelectorAll("main section[id]").forEach((s) => spy.observe(s));
 document.querySelectorAll("[data-subject]").forEach((a) =>
   a.addEventListener("click", () => { document.getElementById("subject").value = a.dataset.subject; }));
 
-// Contact form -> email
-document.getElementById("contactForm").addEventListener("submit", (e) => {
+// Contact form -> email (Web3Forms when a key is set, otherwise the visitor's email app)
+const contactForm = document.getElementById("contactForm");
+const formNote = document.getElementById("formNote");
+const formSubmit = document.getElementById("formSubmit");
+contactForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const f = new FormData(e.target);
+  const f = new FormData(contactForm);
   const subject = `[Website] ${f.get("subject")} — ${f.get("name")}`;
-  const body = `${f.get("message")}\n\n— ${f.get("name")} (${f.get("email")})`;
-  location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  document.getElementById("formNote").textContent = "Opening your email app… Jazakallahu khairan!";
+
+  if (!FORM_ACCESS_KEY) {
+    const body = `${f.get("message")}\n\n— ${f.get("name")} (${f.get("email")})`;
+    location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    formNote.textContent = "Opening your email app… Jazakallahu khairan!";
+    return;
+  }
+
+  formSubmit.disabled = true;
+  formNote.textContent = "Sending…";
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        access_key: FORM_ACCESS_KEY,
+        subject,
+        from_name: "LAMFAM website",
+        name: f.get("name"),
+        email: f.get("email"),
+        topic: f.get("subject"),
+        message: f.get("message"),
+        botcheck: f.get("botcheck") ? true : "",
+      }),
+    });
+    const data = await res.json();
+    if (!data.success) throw new Error(data.message);
+    contactForm.reset();
+    formNote.textContent = "Message sent. Jazakallahu khairan, we'll get back to you soon!";
+  } catch (err) {
+    formNote.textContent = "Sorry, your message couldn't be sent. Please try again or message us on WhatsApp.";
+  } finally {
+    formSubmit.disabled = false;
+  }
 });
