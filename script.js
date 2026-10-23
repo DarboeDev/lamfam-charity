@@ -32,6 +32,8 @@ const FLOATING_WHATSAPP = "+220 877595999";
 // email app addressed to CONTACT_EMAIL instead.
 const FORM_ACCESS_KEY = "7d3a78a0-3511-4b1f-bcfd-01d2d6553ff8";
 const CONTACT_EMAIL = "darboedev@gmail.com";
+// Web3Forms' free shared hCaptcha site key (bot check on the contact form).
+const HCAPTCHA_SITEKEY = "50b2fe65-b00b-4b9e-ad62-3ba471098be2";
 
 const root = document.documentElement;
 
@@ -262,6 +264,15 @@ document.querySelectorAll("main section[id]").forEach((s) => spy.observe(s));
 document.querySelectorAll("[data-subject]").forEach((a) =>
   a.addEventListener("click", () => { document.getElementById("subject").value = a.dataset.subject; }));
 
+// hCaptcha: the Contact section is dark in light mode (and light in dark mode), so match it
+let captchaId = null;
+window.renderCaptcha = () => {
+  captchaId = hcaptcha.render("captcha", {
+    sitekey: HCAPTCHA_SITEKEY,
+    theme: isDark() ? "light" : "dark",
+  });
+};
+
 // Contact form -> email (Web3Forms when a key is set, otherwise the visitor's email app)
 const contactForm = document.getElementById("contactForm");
 const formNote = document.getElementById("formNote");
@@ -275,6 +286,12 @@ contactForm.addEventListener("submit", async (e) => {
     const body = `${f.get("message")}\n\n— ${f.get("name")} (${f.get("email")})`;
     location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     formNote.textContent = "Opening your email app… Jazakallahu khairan!";
+    return;
+  }
+
+  const captchaToken = window.hcaptcha && captchaId !== null ? hcaptcha.getResponse(captchaId) : "";
+  if (!captchaToken) {
+    formNote.textContent = "Please tick the “I am human” box before sending.";
     return;
   }
 
@@ -293,6 +310,7 @@ contactForm.addEventListener("submit", async (e) => {
         topic: f.get("subject"),
         message: f.get("message"),
         botcheck: f.get("botcheck") ? true : "",
+        "h-captcha-response": captchaToken,
       }),
     });
     const data = await res.json();
@@ -303,5 +321,6 @@ contactForm.addEventListener("submit", async (e) => {
     formNote.textContent = "Sorry, your message couldn't be sent. Please try again or message us on WhatsApp.";
   } finally {
     formSubmit.disabled = false;
+    if (window.hcaptcha && captchaId !== null) hcaptcha.reset(captchaId);
   }
 });

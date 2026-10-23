@@ -679,6 +679,7 @@ a.give:hover { transform: translateY(-6px); border-color: var(--line-strong); }
 .field textarea { resize: vertical; }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-bottom-color: var(--inv-ink); }
 .form__trap { display: none; }
+.form__captcha { min-height: 78px; }
 .form button[disabled] { opacity: .6; cursor: progress; }
 .form__note { min-height: 1.2em; margin: 0; font-size: 0.9rem; }
 

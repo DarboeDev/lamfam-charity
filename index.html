@@ -1451,6 +1451,8 @@
                 required
               ></textarea>
             </div>
+            <!-- hCaptcha (free with Web3Forms); rendered by script.js -->
+            <div class="form__captcha" id="captcha"></div>
             <!-- Spam trap: real visitors never see or tick this -->
             <input
               type="checkbox"
@@ -1622,5 +1624,6 @@
 
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://js.hcaptcha.com/1/api.js?render=explicit&onload=renderCaptcha" async defer></script>
   </body>
 </html>
