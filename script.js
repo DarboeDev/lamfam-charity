@@ -30,8 +30,8 @@ const FLOATING_WHATSAPP = "+220 877595999";
 // ---- Contact form. Paste your free Web3Forms access key here (get one at https://web3forms.com
 // using the inbox that should receive messages). Until it is set, the form opens the visitor's
 // email app addressed to CONTACT_EMAIL instead.
-const FORM_ACCESS_KEY = "";
-const CONTACT_EMAIL = "hello@lamfamcharity.org";
+const FORM_ACCESS_KEY = "7d3a78a0-3511-4b1f-bcfd-01d2d6553ff8";
+const CONTACT_EMAIL = "darboedev@gmail.com";
 
 const root = document.documentElement;
 
