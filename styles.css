@@ -676,6 +676,10 @@ a.give:hover { transform: translateY(-6px); border-color: var(--line-strong); }
   transition: border-color .3s;
 }
 .field select option { color: #0a0a0a; }
+.phone { display: flex; gap: 12px; align-items: end; }
+.phone select { flex: 0 0 auto; width: 9.5rem; }
+.phone input { flex: 1; min-width: 0; }
+.phone input:invalid:not(:placeholder-shown) { border-bottom-color: #e5484d; }
 .field textarea { resize: vertical; }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-bottom-color: var(--inv-ink); }
 .form__trap { display: none; }

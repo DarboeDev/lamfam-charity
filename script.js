@@ -32,6 +32,20 @@ const FLOATING_WHATSAPP = "+220 877595999";
 // email app addressed to CONTACT_EMAIL instead.
 const FORM_ACCESS_KEY = "7d3a78a0-3511-4b1f-bcfd-01d2d6553ff8";
 const CONTACT_EMAIL = "darboedev@gmail.com";
+// Country codes for the contact form's phone field. The first one is selected by default.
+const COUNTRY_CODES = [
+  ["Gambia", "+220"], ["Senegal", "+221"], ["Guinea-Bissau", "+245"], ["Guinea", "+224"],
+  ["Mali", "+223"], ["Mauritania", "+222"], ["Sierra Leone", "+232"], ["Liberia", "+231"],
+  ["Ghana", "+233"], ["Nigeria", "+234"], ["Côte d'Ivoire", "+225"], ["Morocco", "+212"],
+  ["Egypt", "+20"], ["United Kingdom", "+44"], ["Ireland", "+353"], ["Spain", "+34"],
+  ["Italy", "+39"], ["France", "+33"], ["Germany", "+49"], ["Netherlands", "+31"],
+  ["Belgium", "+32"], ["Sweden", "+46"], ["Norway", "+47"], ["Denmark", "+45"],
+  ["Finland", "+358"], ["Switzerland", "+41"], ["Austria", "+43"], ["Portugal", "+351"],
+  ["United States", "+1"], ["Canada", "+1"], ["United Arab Emirates", "+971"],
+  ["Saudi Arabia", "+966"], ["Qatar", "+974"], ["Kuwait", "+965"], ["Turkey", "+90"],
+  ["Malaysia", "+60"], ["Australia", "+61"],
+];
+
 // Web3Forms' free shared hCaptcha site key (bot check on the contact form).
 const HCAPTCHA_SITEKEY = "50b2fe65-b00b-4b9e-ad62-3ba471098be2";
 
@@ -273,6 +287,14 @@ window.renderCaptcha = () => {
   });
 };
 
+// Phone country code picker
+document.getElementById("phoneCode").innerHTML = COUNTRY_CODES
+  .map(([country, code]) => `<option value="${esc(code)}">${esc(country)} ${esc(code)}</option>`).join("");
+const phoneValue = (f) => {
+  const number = String(f.get("phone") || "").replace(/\D/g, "");
+  return number ? `${f.get("phoneCode")} ${number}` : "";
+};
+
 // Contact form -> email (Web3Forms when a key is set, otherwise the visitor's email app)
 const contactForm = document.getElementById("contactForm");
 const formNote = document.getElementById("formNote");
@@ -283,7 +305,8 @@ contactForm.addEventListener("submit", async (e) => {
   const subject = `[Website] ${f.get("subject")} — ${f.get("name")}`;
 
   if (!FORM_ACCESS_KEY) {
-    const body = `${f.get("message")}\n\n— ${f.get("name")} (${f.get("email")})`;
+    const phone = phoneValue(f);
+    const body = `${f.get("message")}\n\n— ${f.get("name")} (${f.get("email")}${phone ? `, ${phone}` : ""})`;
     location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     formNote.textContent = "Opening your email app… Jazakallahu khairan!";
     return;
@@ -307,6 +330,7 @@ contactForm.addEventListener("submit", async (e) => {
         from_name: "LAMFAM website",
         name: f.get("name"),
         email: f.get("email"),
+        phone: phoneValue(f) || "Not given",
         topic: f.get("subject"),
         message: f.get("message"),
         botcheck: f.get("botcheck") ? true : "",

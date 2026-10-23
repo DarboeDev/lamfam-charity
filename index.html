@@ -1433,14 +1433,38 @@
                 />
               </div>
             </div>
-            <div class="field">
-              <label for="subject">I'd like to</label>
-              <select id="subject" name="subject">
-                <option>Donate</option>
-                <option>Volunteering</option>
-                <option>Partnership</option>
-                <option>Something else</option>
-              </select>
+            <div class="form__row">
+              <div class="field">
+                <label for="phone">Phone / WhatsApp</label>
+                <div class="phone">
+                  <!-- Country codes are filled from COUNTRY_CODES in script.js -->
+                  <select
+                    id="phoneCode"
+                    name="phoneCode"
+                    aria-label="Country code"
+                    autocomplete="tel-country-code"
+                  ></select>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    inputmode="tel"
+                    autocomplete="tel-national"
+                    placeholder="e.g. 7001234"
+                    pattern="[0-9 ]{5,15}"
+                    title="Digits only, without the country code"
+                  />
+                </div>
+              </div>
+              <div class="field">
+                <label for="subject">I'd like to</label>
+                <select id="subject" name="subject">
+                  <option>Donate</option>
+                  <option>Volunteering</option>
+                  <option>Partnership</option>
+                  <option>Something else</option>
+                </select>
+              </div>
             </div>
             <div class="field">
               <label for="message">Message</label>
