@@ -22,6 +22,19 @@ Then open http://localhost:5510.
 - **Team phone numbers:** add `phone: "+220 …"` to anyone in `TEAM` to list them in the Contact section with Call and WhatsApp buttons.
 - **Photos:** live in `assets/photos/`. `PHOTO-SHOT-LIST.md` lists the shots still needed.
 
+## SEO and sharing
+
+- The official address is **https://www.lamfamcharity.org/**. It is set in the `<head>` of `index.html` (canonical link, social tags, structured data), in `robots.txt` and in `sitemap.xml`. If the address ever changes, update it in those three places.
+- `assets/og-image.jpg` (1200×630) is the preview shown when the link is shared on WhatsApp, Facebook, X or LinkedIn.
+- `favicon.ico`, `assets/apple-touch-icon.png`, `assets/icon-*.png` and `site.webmanifest` are the browser and phone icons.
+- `404.html` is shown for broken links (on Vercel and GitHub Pages; the local Python server doesn't use it).
+
+### Connecting lamfamcharity.org
+
+1. In Vercel, open the project → **Settings → Domains** and add `lamfamcharity.org` and `www.lamfamcharity.org`.
+2. Vercel shows the DNS records to add where the domain was bought (usually an `A` record for `lamfamcharity.org` and a `CNAME` for `www`). Add them exactly as shown.
+3. Once the domain works, add it to **Google Search Console** (https://search.google.com/search-console), verify it, and submit `https://www.lamfamcharity.org/sitemap.xml`.
+
 ## Deploy
 
 The site has no build step, so it can be hosted as-is on GitHub Pages, Netlify or Vercel.

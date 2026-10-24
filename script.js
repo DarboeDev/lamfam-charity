@@ -138,6 +138,15 @@ if (receiptNumbers.length) {
   document.getElementById("fabReceiptBox").hidden = false;
 }
 
+// "Join monthly giving" opens a WhatsApp chat so the team can welcome the new monthly donor
+if (WHATSAPP) {
+  const monthlyText = "Assalamu alaikum, I would like to join LAMFAM Charity's monthly contributions.";
+  const join = document.getElementById("monthlyJoin");
+  join.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(monthlyText)}`;
+  join.target = "_blank";
+  join.rel = "noopener";
+}
+
 // Floating Donate panel and WhatsApp button
 const fabBtn = document.getElementById("fabBtn");
 const fabPanel = document.getElementById("fabPanel");
@@ -158,13 +167,16 @@ if (digits(FLOATING_WHATSAPP)) {
   fabWa.hidden = false;
 }
 
-// Partners slider: append a hidden copy of the logos so the loop is seamless
-const partnersTrack = document.getElementById("partnersTrack");
-if (partnersTrack && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  [...partnersTrack.children].forEach((tile) => {
-    const copy = tile.cloneNode(true);
-    copy.setAttribute("aria-hidden", "true");
-    partnersTrack.appendChild(copy);
+// Looping sliders (partners, Why we give): append a hidden copy of the items so the loop is seamless
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  ["partnersTrack", "whyTrack"].forEach((id) => {
+    const track = document.getElementById(id);
+    if (!track) return;
+    [...track.children].forEach((item) => {
+      const copy = item.cloneNode(true);
+      copy.setAttribute("aria-hidden", "true");
+      track.appendChild(copy);
+    });
   });
 }
 

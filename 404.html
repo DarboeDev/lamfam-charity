@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found | LAMFAM Charity</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <script>
+      try {
+        const t = localStorage.getItem("lamfam-theme");
+        if (t) document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .notfound {
+        min-height: 100vh; min-height: 100dvh;
+        display: grid; place-items: center; text-align: center; padding: 48px 16px;
+      }
+      .notfound__mark {
+        display: block; width: 72px; height: 76px; margin: 0 auto 28px; background: var(--ink);
+        -webkit-mask: url("/assets/logo-mark-white.png") center / contain no-repeat;
+                mask: url("/assets/logo-mark-white.png") center / contain no-repeat;
+      }
+      .notfound p { max-width: 30em; margin: 0 auto 28px; }
+      .notfound .hero__ctas { justify-content: center; }
+    </style>
+  </head>
+  <body>
+    <main class="notfound">
+      <div>
+        <span class="notfound__mark" aria-hidden="true"></span>
+        <span class="eyebrow">Error 404</span>
+        <h1 class="h2">This page went <em>missing</em></h1>
+        <p>
+          The page you're looking for doesn't exist. Head back home to see our
+          work, or give to a family in need.
+        </p>
+        <div class="hero__ctas">
+          <a href="/" class="btn btn--solid">Back to home</a>
+          <a href="/#donate" class="btn btn--ghost">Donate</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

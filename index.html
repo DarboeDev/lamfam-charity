@@ -3,19 +3,103 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>LAMFAM Charity — Be someone's reason to smile</title>
-    <meta
-      name="description"
-      content="LAMFAM Charity is a youth-led charity in The Gambia feeding families during Ramadan, building water points, visiting the sick and providing Qurans, learning materials and essentials to students and communities in need."
-    />
-    <meta property="og:title" content="LAMFAM Charity" />
-    <meta
-      property="og:description"
-      content="Youth-led charity in The Gambia. Be someone's reason to smile."
-    />
-    <meta property="og:image" content="assets/photos/volunteers-group.jpg" />
+    <title>LAMFAM Charity — Youth-led charity in The Gambia</title>
+    <meta name="description" content="Youth-led charity in The Gambia giving food, clean water, hospital and orphan support, and Qurans to those in need, for the sake of Allah. Donate by Wave or bank." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="LAMFAM Charity" />
+    <link rel="canonical" href="https://www.lamfamcharity.org/" />
+
+    <!-- Social previews (WhatsApp, Facebook, Instagram, X, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LAMFAM Charity" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:url" content="https://www.lamfamcharity.org/" />
+    <meta property="og:title" content="LAMFAM Charity — Be someone's reason to smile" />
+    <meta property="og:description" content="Youth-led charity in The Gambia. Food for families, clean water, hospital and orphan support, Qurans for students. Give by Wave, bank or monthly." />
+    <meta property="og:image" content="https://www.lamfamcharity.org/assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A LAMFAM volunteer with smiling children in The Gambia, with the words Be someone's reason to smile" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LAMFAM Charity — Be someone's reason to smile" />
+    <meta name="twitter:description" content="Youth-led charity in The Gambia. Food for families, clean water, hospital and orphan support, Qurans for students. Give by Wave, bank or monthly." />
+    <meta name="twitter:image" content="https://www.lamfamcharity.org/assets/og-image.jpg" />
+
+    <!-- Icons and installable-app details -->
     <meta name="theme-color" content="#0a0a0a" />
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Structured data: tells Google this is a charity, where it works and how to reach it -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NGO",
+      "@id": "https://www.lamfamcharity.org/#organization",
+      "name": "LAMFAM Charity",
+      "alternateName": "LAMFAM",
+      "url": "https://www.lamfamcharity.org/",
+      "logo": "https://www.lamfamcharity.org/assets/icon-512.png",
+      "image": "https://www.lamfamcharity.org/assets/og-image.jpg",
+      "slogan": "Be someone's reason to smile",
+      "description": "LAMFAM Charity is a youth-led charity in The Gambia. We give food and essentials to families in need, build boreholes and water points, support hospitals, orphans and daara students, and carry out Qurbani — for the sake of Allah. Donate by Wave, bank transfer or monthly.",
+      "email": "darboedev@gmail.com",
+      "telephone": "+220 833922803",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GM"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "The Gambia"
+      },
+      "knowsAbout": [
+        "Food packages for families in need",
+        "Boreholes and clean water",
+        "Qurbani and Eid",
+        "Hospital drives",
+        "Orphan support",
+        "Qurans and essentials for daara students",
+        "Emergency relief",
+        "Ramadan iftar"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/lamfam_charity/",
+        "https://www.tiktok.com/@lamfam.charity",
+        "https://gofund.me/fff518db1"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "donations and enquiries",
+          "telephone": "+220 877595999",
+          "email": "darboedev@gmail.com",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.lamfamcharity.org/#website",
+      "url": "https://www.lamfamcharity.org/",
+      "name": "LAMFAM Charity",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://www.lamfamcharity.org/#organization"
+      }
+    }
+  ]
+}
+    </script>
+
+    <!-- Load the first hero photo early -->
+    <link rel="preload" as="image" href="assets/photos/mosque-volunteers.jpg" />
 
     <!-- Apply saved theme before paint to avoid a flash -->
     <script>
@@ -140,9 +224,9 @@
 
             <div class="supporters reveal">
               <div class="avatars" aria-hidden="true">
-                <img src="assets/photos/water-kids.jpg" alt="" />
-                <img src="assets/photos/kids-class.jpg" alt="" />
-                <img src="assets/photos/volunteers-doorstep.jpg" alt="" />
+                <img src="assets/photos/water-kids.jpg" width="869" height="1080" decoding="async" alt="" />
+                <img src="assets/photos/kids-class.jpg" width="719" height="1080" decoding="async" alt="" />
+                <img src="assets/photos/volunteers-doorstep.jpg" width="1080" height="720" decoding="async" alt="" />
               </div>
               <div>
                 <strong>7K+ supporters</strong>
@@ -184,45 +268,45 @@
             <div class="pills__col">
               <figure class="pill pill--l">
                 <img
-                  src="assets/photos/mosque-volunteers.jpg"
+                  src="assets/photos/mosque-volunteers.jpg" width="810" height="1080" decoding="async"
                   alt="Two LAMFAM volunteers in branded vests sitting in a mosque"
                   style="object-position: 60% center"
                 />
               </figure>
               <figure class="pill pill--s">
                 <img
-                  src="assets/photos/kids-class.jpg"
-                  alt="A LAMFAM volunteer sitting with children in a classroom"
-                  style="object-position: 40% 70%"
+                  src="assets/photos/kids-smiles.jpg" width="1080" height="608" decoding="async"
+                  alt="A LAMFAM volunteer with smiling children"
+                  style="object-position: 45% center"
                 />
               </figure>
             </div>
             <div class="pills__col">
               <figure class="pill pill--s">
                 <img
-                  src="assets/photos/volunteers-group.jpg"
+                  src="assets/photos/volunteers-group.jpg" width="1080" height="607" decoding="async"
                   alt="A large group of LAMFAM volunteers with food packages"
                 />
               </figure>
               <figure class="pill pill--l">
                 <img
-                  src="assets/photos/water-kids.jpg"
-                  alt="Children drinking from a new LAMFAM water point"
-                  style="object-position: 45% center"
+                  src="assets/photos/kids-tap.jpg" width="608" height="1080" decoding="async"
+                  alt="Children smiling as they wash at a new LAMFAM water point"
+                  style="object-position: 60% center"
                 />
               </figure>
             </div>
             <div class="pills__col">
               <figure class="pill pill--m">
                 <img
-                  src="assets/photos/borehole-tower.jpg"
-                  alt="A LAMFAM volunteer looking up at a new borehole water tower"
-                  style="object-position: 55% center"
+                  src="assets/photos/sister-tower.jpg" width="608" height="1080" decoding="async"
+                  alt="A LAMFAM volunteer looking towards a new borehole water tower"
+                  style="object-position: 50% center"
                 />
               </figure>
               <figure class="pill pill--m">
                 <img
-                  src="assets/photos/rice-loading.jpg"
+                  src="assets/photos/rice-loading.jpg" width="1080" height="864" decoding="async"
                   alt="Volunteers loading sacks of rice into a car"
                   style="object-position: 62% center"
                 />
@@ -262,7 +346,7 @@
             <figure class="collage__main frame">
               <img
                 id="aboutMain"
-                src="assets/photos/packing.jpg"
+                src="assets/photos/packing.jpg" width="808" height="1080" decoding="async"
                 alt="LAMFAM volunteers packing supplies together"
                 loading="lazy"
               />
@@ -270,7 +354,7 @@
             <figure class="collage__circle">
               <img
                 id="aboutCircle"
-                src="assets/photos/sisters-packages.jpg"
+                src="assets/photos/sisters-packages.jpg" width="810" height="1080" decoding="async"
                 alt="Sisters from the LAMFAM team with food packages"
                 loading="lazy"
               />
@@ -289,7 +373,7 @@
           <div class="about__body">
             <span class="eyebrow reveal"
               ><img
-                src="assets/logo-mark-white.png"
+                src="assets/logo-mark-white.png" width="332" height="352" loading="lazy" decoding="async"
                 alt=""
                 class="eyebrow__mark"
               />
@@ -453,7 +537,7 @@
           <div class="section-head">
             <div>
               <span class="eyebrow reveal">Our programmes</span>
-              <h2 class="h2 reveal">Nine ways we bring <em>smiles</em> home</h2>
+              <h2 class="h2 reveal">How we bring <em>smiles</em> home</h2>
             </div>
             <p class="section-head__aside reveal">
               Food, water, faith and care — delivered by young volunteers, hand
@@ -464,19 +548,20 @@
           <!-- Cards without a photo show an icon tile; add <img> inside .work-card__media when photos arrive -->
           <div class="work-grid">
             <article class="work-card reveal">
-              <div class="work-card__media work-card__media--empty">
+              <div class="work-card__media">
                 <img
-                  src="assets/photos/packing.jpg"
-                  alt="Ramadan iftar packing"
+                  src="assets/photos/mattresses.jpg" width="806" height="1280" decoding="async"
+                  alt="A LAMFAM volunteer carrying mattresses from a truck for families"
                   loading="lazy"
+                  style="object-position: center 30%"
                 />
               </div>
               <span class="work-card__num">No — 01</span>
               <div class="work-card__body">
-                <h3>Ramadan iftar</h3>
+                <h3>Essentials for families in need</h3>
                 <p>
-                  During Ramadan we serve iftar to those who are fasting and in
-                  need. Together, we have fed thousands.
+                  Food packages, everyday essentials and materials for needy
+                  families all year round, delivered to their door.
                 </p>
                 <a href="#donate" class="work-card__cta"
                   >Donate <i data-lucide="arrow-right"></i
@@ -487,33 +572,12 @@
             <article class="work-card reveal">
               <div class="work-card__media">
                 <img
-                  src="assets/photos/packages-group.jpg"
-                  alt="Volunteers behind rows of Ramadan food packages"
+                  src="assets/photos/kids-tap.jpg" width="608" height="1080" decoding="async"
+                  alt="Children smiling as they wash at a new LAMFAM water point"
                   loading="lazy"
                 />
               </div>
               <span class="work-card__num">No — 02</span>
-              <div class="work-card__body">
-                <h3>Ramadan family packages</h3>
-                <p>
-                  Rice, onions, oil and essentials delivered straight to family
-                  doors, so households can focus on worship, not worry.
-                </p>
-                <a href="#donate" class="work-card__cta"
-                  >Donate <i data-lucide="arrow-right"></i
-                ></a>
-              </div>
-            </article>
-
-            <article class="work-card reveal">
-              <div class="work-card__media">
-                <img
-                  src="assets/photos/plaque-install.jpg"
-                  alt="Volunteers fixing a dedication plaque to a new water point"
-                  loading="lazy"
-                />
-              </div>
-              <span class="work-card__num">No — 03</span>
               <div class="work-card__body">
                 <h3>Water &amp; boreholes</h3>
                 <p>
@@ -529,12 +593,12 @@
             <article class="work-card reveal">
               <div class="work-card__media">
                 <img
-                  src="assets/photos/qurbani-ram.jpg"
+                  src="assets/photos/qurbani-ram.jpg" width="933" height="1400" decoding="async"
                   alt="A ram ready for Qurbani"
                   loading="lazy"
                 />
               </div>
-              <span class="work-card__num">No — 04</span>
+              <span class="work-card__num">No — 03</span>
               <div class="work-card__body">
                 <h3>Qurbani &amp; Eid</h3>
                 <p>
@@ -550,12 +614,12 @@
             <article class="work-card reveal">
               <div class="work-card__media">
                 <img
-                  src="assets/photos/hospital-ward.jpg"
+                  src="assets/photos/hospital-ward.jpg" width="1040" height="780" decoding="async"
                   alt="Mothers and patients in a hospital maternity ward"
                   loading="lazy"
                 />
               </div>
-              <span class="work-card__num">No — 05</span>
+              <span class="work-card__num">No — 04</span>
               <div class="work-card__body">
                 <h3>Hospital drives</h3>
                 <p>
@@ -571,13 +635,13 @@
             <article class="work-card reveal">
               <div class="work-card__media">
                 <img
-                  src="assets/photos/quran-students.jpg"
-                  alt="Smiling children supported by LAMFAM"
+                  src="assets/photos/kids-smiles.jpg" width="1080" height="608" decoding="async"
+                  alt="A LAMFAM volunteer with smiling children"
                   loading="lazy"
-                  style="object-position: 30% center"
+                  style="object-position: 40% center"
                 />
               </div>
-              <span class="work-card__num">No — 06</span>
+              <span class="work-card__num">No — 05</span>
               <div class="work-card__body">
                 <h3>Orphan support</h3>
                 <p>
@@ -593,12 +657,12 @@
             <article class="work-card reveal">
               <div class="work-card__media">
                 <img
-                  src="assets/photos/quran-students.jpg"
+                  src="assets/photos/quran-students.jpg" width="804" height="627" decoding="async"
                   alt="Quranic students in a daara"
                   loading="lazy"
                 />
               </div>
-              <span class="work-card__num">No — 07</span>
+              <span class="work-card__num">No — 06</span>
               <div class="work-card__body">
                 <h3>Daaras, Qurans &amp; students</h3>
                 <p>
@@ -615,13 +679,13 @@
             <article class="work-card reveal">
               <div class="work-card__media">
                 <img
-                  src="assets/photos/special-case.jpg"
+                  src="assets/photos/special-case.jpg" width="1000" height="667" decoding="async"
                   alt="A mother sitting with her sick child on a hospital bed as a health worker adjusts his drip"
                   loading="lazy"
                   style="object-position: 75% center"
                 />
               </div>
-              <span class="work-card__num">No — 08</span>
+              <span class="work-card__num">No — 07</span>
               <div class="work-card__body">
                 <h3>Special Cases</h3>
                 <p>
@@ -636,14 +700,38 @@
 
             <article class="work-card reveal">
               <div class="work-card__media work-card__media--empty">
-                <i data-lucide="siren"></i>
+                <img
+                  src="assets/photos/distribution-outdoor.jpg" width="1080" height="810" decoding="async"
+                  alt="Distrubuting from emergency relief truck"
+                  loading="lazy"
               </div>
-              <span class="work-card__num">No — 09</span>
+              <span class="work-card__num">No — 08</span>
               <div class="work-card__body">
                 <h3>Emergency relief</h3>
                 <p>
                   Fast help when floods, fires or other crises leave families
                   with nothing.
+                </p>
+                <a href="#donate" class="work-card__cta"
+                  >Donate <i data-lucide="arrow-right"></i
+                ></a>
+              </div>
+            </article>
+
+            <article class="work-card reveal">
+              <div class="work-card__media">
+                <img
+                  src="assets/photos/packing.jpg" width="808" height="1080" decoding="async"
+                  alt="Ramadan iftar packing"
+                  loading="lazy"
+                />
+              </div>
+              <span class="work-card__num">No — 09</span>
+              <div class="work-card__body">
+                <h3>Ramadan iftar</h3>
+                <p>
+                  During Ramadan we serve iftar to those who are fasting and in
+                  need. Together, we have fed thousands.
                 </p>
                 <a href="#donate" class="work-card__cta"
                   >Donate <i data-lucide="arrow-right"></i
@@ -676,69 +764,72 @@
             </p>
           </div>
 
-          <div class="why-grid">
-            <figure class="verse verse--quran reveal">
-              <span class="verse__tag">Qur'an</span>
-              <blockquote>
-                “The example of those who spend their wealth in the way of Allah
-                is like a seed which grows seven spikes; in each spike is a
-                hundred grains.”
-              </blockquote>
-              <figcaption>Al-Baqarah 2:261</figcaption>
-            </figure>
-            <figure class="verse verse--quran reveal">
-              <span class="verse__tag">Qur'an</span>
-              <blockquote>
-                “Whoever saves one life, it is as if he had saved mankind
-                entirely.”
-              </blockquote>
-              <figcaption>Al-Ma'idah 5:32</figcaption>
-            </figure>
-            <figure class="verse reveal">
-              <span class="verse__tag">Hadith</span>
-              <blockquote>
-                “Feed the hungry, visit the sick, and set free the captive.”
-              </blockquote>
-              <figcaption>Sahih al-Bukhari</figcaption>
-            </figure>
-            <figure class="verse reveal">
-              <span class="verse__tag">Hadith</span>
-              <blockquote>
-                “The one who looks after an orphan and I will be in Paradise
-                like this,” and he ﷺ held two fingers together.
-              </blockquote>
-              <figcaption>Sahih al-Bukhari</figcaption>
-            </figure>
-            <figure class="verse reveal">
-              <span class="verse__tag">Hadith</span>
-              <blockquote>
-                “When a person dies, their deeds end except for three: ongoing
-                charity, beneficial knowledge, or a righteous child who prays
-                for them.”
-              </blockquote>
-              <figcaption>Sahih Muslim</figcaption>
-            </figure>
-            <figure class="verse reveal">
-              <span class="verse__tag">Hadith</span>
-              <blockquote>
-                “Allah helps His servant as long as the servant helps his
-                brother.”
-              </blockquote>
-              <figcaption>Sahih Muslim</figcaption>
-            </figure>
-            <figure class="verse reveal">
-              <span class="verse__tag">Hadith</span>
-              <blockquote>“Charity does not decrease wealth.”</blockquote>
-              <figcaption>Sahih Muslim</figcaption>
-            </figure>
-            <figure class="verse reveal">
-              <span class="verse__tag">Hadith</span>
-              <blockquote>
-                Sa'd asked, “Which charity is best?” The Prophet ﷺ said:
-                “Water.”
-              </blockquote>
-              <figcaption>Sunan Abu Dawud</figcaption>
-            </figure>
+          <!-- Verses scroll slowly in a loop; script.js duplicates them for a seamless loop -->
+          <div class="why-slider reveal" aria-label="Qur'an verses and hadith on giving">
+            <div class="why-track" id="whyTrack">
+              <figure class="verse verse--quran">
+                <span class="verse__tag">Qur'an</span>
+                <blockquote>
+                  “The example of those who spend their wealth in the way of Allah
+                  is like a seed which grows seven spikes; in each spike is a
+                  hundred grains.”
+                </blockquote>
+                <figcaption>Al-Baqarah 2:261</figcaption>
+              </figure>
+              <figure class="verse verse--quran">
+                <span class="verse__tag">Qur'an</span>
+                <blockquote>
+                  “Whoever saves one life, it is as if he had saved mankind
+                  entirely.”
+                </blockquote>
+                <figcaption>Al-Ma'idah 5:32</figcaption>
+              </figure>
+              <figure class="verse">
+                <span class="verse__tag">Hadith</span>
+                <blockquote>
+                  “Feed the hungry, visit the sick, and set free the captive.”
+                </blockquote>
+                <figcaption>Sahih al-Bukhari</figcaption>
+              </figure>
+              <figure class="verse">
+                <span class="verse__tag">Hadith</span>
+                <blockquote>
+                  “The one who looks after an orphan and I will be in Paradise
+                  like this,” and he ﷺ held two fingers together.
+                </blockquote>
+                <figcaption>Sahih al-Bukhari</figcaption>
+              </figure>
+              <figure class="verse">
+                <span class="verse__tag">Hadith</span>
+                <blockquote>
+                  “When a person dies, their deeds end except for three: ongoing
+                  charity, beneficial knowledge, or a righteous child who prays
+                  for them.”
+                </blockquote>
+                <figcaption>Sahih Muslim</figcaption>
+              </figure>
+              <figure class="verse">
+                <span class="verse__tag">Hadith</span>
+                <blockquote>
+                  “Allah helps His servant as long as the servant helps his
+                  brother.”
+                </blockquote>
+                <figcaption>Sahih Muslim</figcaption>
+              </figure>
+              <figure class="verse">
+                <span class="verse__tag">Hadith</span>
+                <blockquote>“Charity does not decrease wealth.”</blockquote>
+                <figcaption>Sahih Muslim</figcaption>
+              </figure>
+              <figure class="verse">
+                <span class="verse__tag">Hadith</span>
+                <blockquote>
+                  Sa'd asked, “Which charity is best?” The Prophet ﷺ said:
+                  “Water.”
+                </blockquote>
+                <figcaption>Sunan Abu Dawud</figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </section>
@@ -750,22 +841,23 @@
             <span class="bubbles__dots" aria-hidden="true"></span>
             <figure class="bubble bubble--xl">
               <img
-                src="assets/photos/water-point.jpg"
-                alt="Clean water flowing from a LAMFAM water point"
+                src="assets/photos/water-crowd.jpg" width="1080" height="608" decoding="async"
+                alt="A LAMFAM volunteer at a new water point surrounded by children"
                 loading="lazy"
+                style="object-position: 30% center"
               />
             </figure>
             <figure class="bubble bubble--md">
               <img
-                src="assets/photos/borehole-tower.jpg"
-                alt="A volunteer at a new borehole water tower"
+                src="assets/photos/sister-tower.jpg" width="608" height="1080" decoding="async"
+                alt="A LAMFAM volunteer looking towards a new borehole water tower"
                 loading="lazy"
               />
             </figure>
             <figure class="bubble bubble--sm">
               <img
-                src="assets/photos/water-kids.jpg"
-                alt="Children drinking from a LAMFAM water point"
+                src="assets/photos/water-point.jpg" width="810" height="1080" decoding="async"
+                alt="A girl drinking from a LAMFAM water point dedicated in memory of a loved one"
                 loading="lazy"
               />
             </figure>
@@ -829,9 +921,36 @@
             </p>
           </div>
 
-          <div class="give-grid">
+          <!-- Monthly contributions -->
+          <div class="monthly reveal">
+            <div class="monthly__amount">
+              <span>From</span>
+              <strong>D100</strong>
+              <span>a month</span>
+            </div>
+            <div class="monthly__copy">
+              <span class="eyebrow">Monthly contributions</span>
+              <h3>Empower lives, every month</h3>
+              <p>
+                Give D100 or more each month by Wave or bank transfer. Regular
+                support lets us plan ahead and keep improving the lives of the
+                less privileged through:
+              </p>
+              <ul class="monthly__uses">
+                <li><i data-lucide="droplets"></i> Sustainable water</li>
+                <li><i data-lucide="utensils"></i> Food</li>
+                <li><i data-lucide="heart-pulse"></i> Medical support</li>
+                <li><i data-lucide="house"></i> Shelter</li>
+              </ul>
+            </div>
+            <a href="#donate-methods" class="btn monthly__cta" id="monthlyJoin"
+              >Join monthly giving <i data-lucide="arrow-right"></i
+            ></a>
+          </div>
+
+          <div class="give-grid" id="donate-methods">
             <article class="give give--dark reveal">
-              <img src="assets/wave.png" alt="Wave" class="give__logo" />
+              <img src="assets/wave.png" width="225" height="225" loading="lazy" decoding="async" alt="Wave" class="give__logo" />
               <h3>Wave</h3>
               <p>The quickest way to give from The Gambia.</p>
               <dl>
@@ -917,7 +1036,8 @@
               <div class="fund-chips">
                 <span>SADAQAH</span><span>ZAKAT</span><span>WATER</span
                 ><span>RAMADAN</span> <span>QURBANI</span><span>HOSPITAL</span
-                ><span>ORPHAN</span><span>SPECIAL CASE</span>
+                ><span>ORPHAN</span><span>SPECIAL CASE</span
+                ><span>MONTHLY</span>
               </div>
               <p class="give-note__small">
                 Zakat is kept separate and given only to those who are eligible.
@@ -953,7 +1073,7 @@
           <div class="gallery">
             <figure class="g g--wide reveal">
               <img
-                src="assets/photos/packages-volunteers.jpg"
+                src="assets/photos/packages-volunteers.jpg" width="1080" height="719" decoding="async"
                 alt="Volunteers standing among food packages laid out for families"
                 loading="lazy"
               />
@@ -961,7 +1081,7 @@
             </figure>
             <figure class="g g--tall reveal">
               <img
-                src="assets/photos/vest-logo.jpg"
+                src="assets/photos/vest-logo.jpg" width="499" height="880" decoding="async"
                 alt="Back of a LAMFAM Charity volunteer vest with the hand logo"
                 loading="lazy"
               />
@@ -969,7 +1089,7 @@
             </figure>
             <figure class="g reveal">
               <img
-                src="assets/photos/truck-onions.jpg"
+                src="assets/photos/truck-onions.jpg" width="1080" height="719" decoding="async"
                 alt="Volunteers unloading sacks of onions from a pickup truck"
                 loading="lazy"
               />
@@ -977,7 +1097,7 @@
             </figure>
             <figure class="g reveal">
               <img
-                src="assets/photos/kids-school.jpg"
+                src="assets/photos/kids-school.jpg" width="1080" height="607" decoding="async"
                 alt="A group of schoolchildren in blue uniforms"
                 loading="lazy"
               />
@@ -985,7 +1105,7 @@
             </figure>
             <figure class="g reveal">
               <img
-                src="assets/photos/kids-home.jpg"
+                src="assets/photos/kids-home.jpg" width="607" height="1080" decoding="async"
                 alt="Children sitting together inside a family home"
                 loading="lazy"
                 style="object-position: center 70%"
@@ -994,7 +1114,7 @@
             </figure>
             <figure class="g reveal">
               <img
-                src="assets/photos/volunteers-doorstep.jpg"
+                src="assets/photos/volunteers-doorstep.jpg" width="1080" height="720" decoding="async"
                 alt="Volunteers smiling as they deliver a package"
                 loading="lazy"
               />
@@ -1002,7 +1122,7 @@
             </figure>
             <figure class="g g--tall reveal">
               <img
-                src="assets/photos/borehole-build.jpg"
+                src="assets/photos/borehole-build.jpg" width="607" height="1080" decoding="async"
                 alt="A volunteer climbing a new borehole water tower"
                 loading="lazy"
               />
@@ -1010,7 +1130,7 @@
             </figure>
             <figure class="g g--wide reveal">
               <img
-                src="assets/photos/volunteers-crew.jpg"
+                src="assets/photos/volunteers-crew.jpg" width="1080" height="607" decoding="async"
                 alt="LAMFAM volunteers in hi-vis vests gathered with food packages"
                 loading="lazy"
               />
@@ -1018,7 +1138,7 @@
             </figure>
             <figure class="g reveal">
               <img
-                src="assets/photos/packing.jpg"
+                src="assets/photos/packing.jpg" width="808" height="1080" decoding="async"
                 alt="Volunteers packing supplies into boxes"
                 loading="lazy"
               />
@@ -1026,7 +1146,7 @@
             </figure>
             <figure class="g reveal">
               <img
-                src="assets/photos/sisters-packages.jpg"
+                src="assets/photos/sisters-packages.jpg" width="810" height="1080" decoding="async"
                 alt="Sisters from the LAMFAM team with packages"
                 loading="lazy"
               />
@@ -1034,7 +1154,7 @@
             </figure>
             <figure class="g g--wide reveal">
               <img
-                src="assets/photos/community-group.jpg"
+                src="assets/photos/community-group.jpg" width="1080" height="810" decoding="async"
                 alt="A large group of volunteers and community members together"
                 loading="lazy"
               />
@@ -1042,7 +1162,7 @@
             </figure>
             <figure class="g g--wide reveal">
               <img
-                src="assets/photos/packages-lineup.jpg"
+                src="assets/photos/packages-lineup.jpg" width="1080" height="719" decoding="async"
                 alt="Volunteers lined up behind rows of food packages"
                 loading="lazy"
               />
@@ -1050,7 +1170,7 @@
             </figure>
             <figure class="g g--tall reveal">
               <img
-                src="assets/photos/onion-cart.jpg"
+                src="assets/photos/onion-cart.jpg" width="607" height="1080" decoding="async"
                 alt="A volunteer wheeling a cart piled with sacks of onions"
                 loading="lazy"
               />
@@ -1058,7 +1178,7 @@
             </figure>
             <figure class="g reveal">
               <img
-                src="assets/photos/volunteers-trio.jpg"
+                src="assets/photos/volunteers-trio.jpg" width="1080" height="720" decoding="async"
                 alt="Three volunteers carrying a sack of rice together"
                 loading="lazy"
               />
@@ -1066,7 +1186,7 @@
             </figure>
             <figure class="g reveal">
               <img
-                src="assets/photos/food-package.jpg"
+                src="assets/photos/food-package.jpg" width="608" height="1080" decoding="async"
                 alt="A family food package of rice, onions and cooking oil"
                 loading="lazy"
               />
@@ -1074,7 +1194,7 @@
             </figure>
             <figure class="g reveal">
               <img
-                src="assets/photos/volunteers-onions.jpg"
+                src="assets/photos/volunteers-onions.jpg" width="810" height="1080" decoding="async"
                 alt="Volunteers in LAMFAM vests carrying sacks of onions"
                 loading="lazy"
               />
@@ -1082,15 +1202,15 @@
             </figure>
             <figure class="g reveal">
               <img
-                src="assets/photos/car-boot.jpg"
-                alt="A volunteer loading food sacks into a car boot"
+                src="assets/photos/rice-lift.jpg" width="1080" height="810" decoding="async"
+                alt="Two LAMFAM volunteers lifting sacks of rice"
                 loading="lazy"
               />
               <figcaption>Loading up</figcaption>
             </figure>
             <figure class="g g--tall reveal">
               <img
-                src="assets/photos/vests-back.jpg"
+                src="assets/photos/vests-back.jpg" width="607" height="1080" decoding="async"
                 alt="Two volunteers in black LAMFAM vests"
                 loading="lazy"
               />
@@ -1098,7 +1218,7 @@
             </figure>
             <figure class="g g--wide reveal">
               <img
-                src="assets/photos/truck-distribution.jpg"
+                src="assets/photos/truck-distribution.jpg" width="1080" height="810" decoding="async"
                 alt="Volunteers handing out sacks from a pickup truck to the community"
                 loading="lazy"
               />
@@ -1106,7 +1226,7 @@
             </figure>
             <figure class="g reveal">
               <img
-                src="assets/photos/onions-carry.jpg"
+                src="assets/photos/onions-carry.jpg" width="864" height="1080" decoding="async"
                 alt="Volunteers carrying bags of onions to families"
                 loading="lazy"
               />
@@ -1114,7 +1234,7 @@
             </figure>
             <figure class="g reveal">
               <img
-                src="assets/photos/volunteer-street.jpg"
+                src="assets/photos/volunteer-street.jpg" width="607" height="1080" decoding="async"
                 alt="A volunteer carrying onions down a street"
                 loading="lazy"
               />
@@ -1122,7 +1242,7 @@
             </figure>
             <figure class="g g--wide reveal">
               <img
-                src="assets/photos/truck-partners.jpg"
+                src="assets/photos/truck-partners.jpg" width="1080" height="719" decoding="async"
                 alt="LAMFAM volunteers and partner volunteers unloading a truck"
                 loading="lazy"
               />
@@ -1130,7 +1250,7 @@
             </figure>
             <figure class="g g--wide reveal">
               <img
-                src="assets/photos/team.jpg"
+                src="assets/photos/team.jpg" width="1080" height="772" decoding="async"
                 alt="LAMFAM brother volunteers standing with members of the team in matching vests"
                 loading="lazy"
                 style="object-position: center 35%"
@@ -1141,7 +1261,7 @@
             </figure>
             <figure class="g g--wide reveal">
               <img
-                src="assets/photos/volunteers-sack.jpg"
+                src="assets/photos/volunteers-sack.jpg" width="1080" height="720" decoding="async"
                 alt="Three volunteers in hi-vis vests carrying a sack of rice"
                 loading="lazy"
               />
@@ -1190,7 +1310,7 @@
               <figure class="partner">
                 <span class="partner__logo"
                   ><img
-                    src="assets/partners/forward-for-you.png"
+                    src="assets/partners/forward-for-you.png" width="55" height="56" loading="lazy" decoding="async"
                     alt="Forward For You logo"
                 /></span>
                 <figcaption>Forward For You</figcaption>
@@ -1198,7 +1318,7 @@
               <figure class="partner">
                 <span class="partner__logo"
                   ><img
-                    src="assets/partners/sister-solidarity.png"
+                    src="assets/partners/sister-solidarity.png" width="56" height="60" loading="lazy" decoding="async"
                     alt="Sister Solidarity logo"
                 /></span>
                 <figcaption>Sister Solidarity</figcaption>
@@ -1206,7 +1326,7 @@
               <figure class="partner">
                 <span class="partner__logo"
                   ><img
-                    src="assets/partners/redefining-sisterhood.png"
+                    src="assets/partners/redefining-sisterhood.png" width="75" height="63" loading="lazy" decoding="async"
                     alt="Redefining Sisterhood logo"
                 /></span>
                 <figcaption>Redefining Sisterhood</figcaption>
@@ -1214,7 +1334,7 @@
               <figure class="partner">
                 <span class="partner__logo"
                   ><img
-                    src="assets/partners/amana.png"
+                    src="assets/partners/amana.png" width="83" height="23" loading="lazy" decoding="async"
                     alt="Amana Foundation logo"
                 /></span>
                 <figcaption>Amana Foundation</figcaption>
@@ -1222,21 +1342,21 @@
               <figure class="partner">
                 <span class="partner__logo"
                   ><img
-                    src="assets/partners/infinite-outreach.png"
+                    src="assets/partners/infinite-outreach.png" width="70" height="55" loading="lazy" decoding="async"
                     alt="Infinite Outreach logo"
                 /></span>
                 <figcaption>Infinite Outreach</figcaption>
               </figure>
               <figure class="partner">
                 <span class="partner__logo"
-                  ><img src="assets/partners/bantu.png" alt="Bantu logo"
+                  ><img src="assets/partners/bantu.png" width="52" height="58" loading="lazy" decoding="async" alt="Bantu logo"
                 /></span>
                 <figcaption>Bantu</figcaption>
               </figure>
               <figure class="partner">
                 <span class="partner__logo"
                   ><img
-                    src="assets/partners/masa.png"
+                    src="assets/partners/masa.png" width="51" height="62" loading="lazy" decoding="async"
                     alt="MaSa Foundation logo"
                 /></span>
                 <figcaption>MaSa Foundation</figcaption>
@@ -1244,7 +1364,7 @@
               <figure class="partner">
                 <span class="partner__logo"
                   ><img
-                    src="assets/partners/tawakul.png"
+                    src="assets/partners/tawakul.png" width="63" height="62" loading="lazy" decoding="async"
                     alt="Tawakul Outreach Org logo"
                 /></span>
                 <figcaption>Tawakul Outreach Org</figcaption>
@@ -1252,21 +1372,21 @@
               <figure class="partner">
                 <span class="partner__logo"
                   ><img
-                    src="assets/partners/rahma.png"
+                    src="assets/partners/rahma.png" width="72" height="59" loading="lazy" decoding="async"
                     alt="Rahma Charity logo"
                 /></span>
                 <figcaption>Rahma Charity</figcaption>
               </figure>
               <figure class="partner">
                 <span class="partner__logo"
-                  ><img src="assets/partners/ibada.png" alt="Ibada logo"
+                  ><img src="assets/partners/ibada.png" width="43" height="62" loading="lazy" decoding="async" alt="Ibada logo"
                 /></span>
                 <figcaption>Ibada</figcaption>
               </figure>
               <figure class="partner">
                 <span class="partner__logo"
                   ><img
-                    src="assets/partners/naafa.png"
+                    src="assets/partners/naafa.png" width="64" height="65" loading="lazy" decoding="async"
                     alt="NAAFA Foundation logo"
                 /></span>
                 <figcaption>NAAFA Foundation</figcaption>
@@ -1504,7 +1624,7 @@
       <div class="container footer__grid">
         <div class="footer__brand">
           <img
-            src="assets/logo-full-white.png"
+            src="assets/logo-full-white.png" width="534" height="465" loading="lazy" decoding="async"
             alt="LAMFAM Charity — Be someone's reason to smile"
             class="footer__logo"
           />
@@ -1578,7 +1698,7 @@
           </button>
         </div>
         <div class="fab__method">
-          <img src="assets/wave.png" alt="" class="fab__logo" />
+          <img src="assets/wave.png" width="225" height="225" loading="lazy" decoding="async" alt="" class="fab__logo" />
           <div class="fab__info">
             <strong>Wave</strong>
             <span data-donate="wave.number"></span>
