@@ -454,6 +454,18 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; letter-spacing: -0.02em; }
 .memorial p { margin: 0; font-size: 0.96rem; }
 .memorial strong { color: var(--ink); }
 
+.journey { margin: 88px 0 72px; }
+.journey__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px; margin-bottom: 28px; }
+.journey__head p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.journey__steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 900px) { .journey__steps { grid-template-columns: repeat(4, 1fr); gap: 26px; } }
+.journey__step figure { margin: 0 0 16px; aspect-ratio: 3 / 4; border-radius: 22px; overflow: hidden; background: var(--surface); }
+.journey__step img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.journey__step:hover img { transform: scale(1.04); }
+.journey__num { font-family: var(--serif); font-size: 1.1rem; color: var(--muted); }
+.journey__step h3 { margin: 2px 0 6px; font-size: 1.12rem; }
+.journey__step p { margin: 0; font-size: 0.93rem; color: var(--muted); }
+
 .quote { margin: 110px auto 0; max-width: 900px; text-align: center; }
 .quote p { font-family: var(--serif); font-size: clamp(1.8rem, 3.6vw, 3rem); line-height: 1.15; color: var(--ink); letter-spacing: -0.01em; margin-bottom: 18px; }
 .quote cite { font-style: normal; color: var(--muted); font-size: 0.92rem; letter-spacing: 0.04em; }
